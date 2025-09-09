@@ -1,526 +1,170 @@
- monster-survivors.html                                                                                           │ │
-│ │                                                                                                                  │ │
-│ │ <!DOCTYPE html>                                                                                                  │ │
-│ │ <html lang="en">                                                                                                 │ │
-│ │ <head>                                                                                                           │ │
-│ │     <meta charset="UTF-8">                                                                                       │ │
-│ │     <meta name="viewport" content="width=device-width, initial-scale=1.0">                                       │ │
-│ │     <title>Monster Survivors - Play Free Online Survival Game | JuZiGongZhu</title>                              │ │
-│ │     <meta name="description" content="Play Monster Survivors online for free! Epic survival action game with     │ │
-│ │ endless monster waves. No download needed - play instantly in your browser on PC and mobile.">                   │ │
-│ │     <meta name="keywords" content="Monster Survivors, online game, survival game, action game, browser game,     │ │
-│ │ free game, monster game, survival action">                                                                       │ │
-│ │     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">  │ │
-│ │     <meta name="author" content="JuZiGongZhu Games">                                                             │ │
-│ │                                                                                                                  │ │
-│ │     <!-- Open Graph / Facebook -->                                                                               │ │
-│ │     <meta property="og:type" content="website">                                                                  │ │
-│ │     <meta property="og:url" content="https://juzigongzhu.com/">                                                  │ │
-│ │     <meta property="og:title" content="Monster Survivors - Play Free Online Survival Game">                      │ │
-│ │     <meta property="og:description" content="Battle endless waves of monsters in this thrilling survival action  │ │
-│ │ game. Play Monster Survivors free online - no download required!">                                               │ │
-│ │     <meta property="og:site_name" content="JuZiGongZhu Games">                                                   │ │
-│ │                                                                                                                  │ │
-│ │     <!-- Twitter -->                                                                                             │ │
-│ │     <meta property="twitter:card" content="summary_large_image">                                                 │ │
-│ │     <meta property="twitter:url" content="https://juzigongzhu.com/">                                             │ │
-│ │     <meta property="twitter:title" content="Monster Survivors - Play Free Online Survival Game">                 │ │
-│ │     <meta property="twitter:description" content="Battle endless waves of monsters in this thrilling survival    │ │
-│ │ action game. Play Monster Survivors free online - no download required!">                                        │ │
-│ │                                                                                                                  │ │
-│ │     <!-- Canonical URL -->                                                                                       │ │
-│ │     <link rel="canonical" href="https://juzigongzhu.com/">                                                       │ │
-│ │                                                                                                                  │ │
-│ │     <!-- Preconnect for performance -->                                                                          │ │
-│ │     <link rel="preconnect" href="https://cloud.onlinegames.io">                                                  │ │
-│ │     <link rel="dns-prefetch" href="//cloud.onlinegames.io">                                                      │ │
-│ │                                                                                                                  │ │
-│ │     <!-- Tailwind CSS -->                                                                                        │ │
-│ │     <script src="https://cdn.tailwindcss.com"></script>                                                          │ │
-│ │     <script>                                                                                                     │ │
-│ │         tailwind.config = {                                                                                      │ │
-│ │             theme: {                                                                                             │ │
-│ │                 extend: {                                                                                        │ │
-│ │                     colors: {                                                                                    │ │
-│ │                         'apple-blue': '#007AFF',                                                                 │ │
-│ │                         'apple-indigo': '#5856D6',                                                               │ │
-│ │                         'apple-purple': '#AF52DE',                                                               │ │
-│ │                         'apple-pink': '#FF2D92',                                                                 │ │
-│ │                         'apple-red': '#FF3B30',                                                                  │ │
-│ │                         'apple-orange': '#FF9500',                                                               │ │
-│ │                         'apple-yellow': '#FFCC00',                                                               │ │
-│ │                         'apple-green': '#30D158',                                                                │ │
-│ │                         'apple-mint': '#00C7BE',                                                                 │ │
-│ │                         'apple-cyan': '#32D4E6',                                                                 │ │
-│ │                         'apple-gray': '#8E8E93',                                                                 │ │
-│ │                         'apple-gray2': '#AEAEB2',                                                                │ │
-│ │                         'apple-gray3': '#C7C7CC',                                                                │ │
-│ │                         'apple-gray4': '#D1D1D6',                                                                │ │
-│ │                         'apple-gray5': '#E5E5EA',                                                                │ │
-│ │                         'apple-gray6': '#F2F2F7',                                                                │ │
-│ │                         'apple-dark': '#1D1D1F',                                                                 │ │
-│ │                         'apple-dark2': '#2C2C2E'                                                                 │ │
-│ │                     },                                                                                           │ │
-│ │                     fontFamily: {                                                                                │ │
-│ │                         'apple': ['-apple-system', 'BlinkMacSystemFont', 'SF Pro Display', 'Segoe UI', 'Roboto', │ │
-│ │  'Helvetica', 'Arial', 'sans-serif']                                                                             │ │
-│ │                     }                                                                                            │ │
-│ │                 }                                                                                                │ │
-│ │             }                                                                                                    │ │
-│ │         }                                                                                                        │ │
-│ │     </script>                                                                                                    │ │
-│ │                                                                                                                  │ │
-│ │     <style>                                                                                                      │ │
-│ │         body {                                                                                                   │ │
-│ │             font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Helvetica,     │ │
-│ │ Arial, sans-serif;                                                                                               │ │
-│ │         }                                                                                                        │ │
-│ │                                                                                                                  │ │
-│ │         .game-container {                                                                                        │ │
-│ │             aspect-ratio: 16/9;                                                                                  │ │
-│ │             max-height: 75vh;                                                                                    │ │
-│ │             min-height: 400px;                                                                                   │ │
-│ │         }                                                                                                        │ │
-│ │                                                                                                                  │ │
-│ │         .apple-gradient {                                                                                        │ │
-│ │             background: linear-gradient(135deg, #F2F2F7 0%, #E5E5EA 50%, #D1D1D6 100%);                          │ │
-│ │         }                                                                                                        │ │
-│ │                                                                                                                  │ │
-│ │         .hero-gradient {                                                                                         │ │
-│ │             background: linear-gradient(135deg, #007AFF 0%, #5856D6 50%, #AF52DE 100%);                          │ │
-│ │         }                                                                                                        │ │
-│ │                                                                                                                  │ │
-│ │         .game-shadow {                                                                                           │ │
-│ │             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.05);              │ │
-│ │         }                                                                                                        │ │
-│ │                                                                                                                  │ │
-│ │         .card-shadow {                                                                                           │ │
-│ │             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);                   │ │
-│ │         }                                                                                                        │ │
-│ │                                                                                                                  │ │
-│ │         .text-gradient {                                                                                         │ │
-│ │             background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);                                       │ │
-│ │             -webkit-background-clip: text;                                                                       │ │
-│ │             -webkit-text-fill-color: transparent;                                                                │ │
-│ │             background-clip: text;                                                                               │ │
-│ │         }                                                                                                        │ │
-│ │                                                                                                                  │ │
-│ │         @media (max-width: 640px) {                                                                              │ │
-│ │             .game-container {                                                                                    │ │
-│ │                 min-height: 250px;                                                                               │ │
-│ │                 max-height: 60vh;                                                                                │ │
-│ │             }                                                                                                    │ │
-│ │         }                                                                                                        │ │
-│ │     </style>                                                                                                     │ │
-│ │ </head>                                                                                                          │ │
-│ │                                                                                                                  │ │
-│ │ <body class="bg-apple-gray6 text-apple-dark font-apple">                                                         │ │
-│ │                                                                                                                  │ │
-│ │     <!-- Header -->                                                                                              │ │
-│ │     <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-apple-gray5">                  │ │
-│ │         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">                                                     │ │
-│ │             <div class="flex items-center justify-between h-16">                                                 │ │
-│ │                 <div class="flex items-center">                                                                  │ │
-│ │                     <h1 class="text-xl sm:text-2xl font-bold text-gradient">Monster Survivors</h1>               │ │
-│ │                     <span class="ml-3 px-2 py-1 text-xs font-medium bg-apple-green text-white                    │ │
-│ │ rounded-full">FREE</span>                                                                                        │ │
-│ │                 </div>                                                                                           │ │
-│ │                 <div class="hidden sm:flex items-center space-x-4 text-sm text-apple-gray">                      │ │
-│ │                     <span>🎮 Play Online</span>                                                                  │ │
-│ │                     <span>📱 Mobile Ready</span>                                                                 │ │
-│ │                 </div>                                                                                           │ │
-│ │             </div>                                                                                               │ │
-│ │         </div>                                                                                                   │ │
-│ │     </header>                                                                                                    │ │
-│ │                                                                                                                  │ │
-│ │     <!-- Hero Section -->                                                                                        │ │
-│ │     <section class="hero-gradient py-12 sm:py-16 lg:py-20">                                                      │ │
-│ │         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">                                         │ │
-│ │             <div class="max-w-4xl mx-auto">                                                                      │ │
-│ │                 <p class="text-lg sm:text-xl lg:text-2xl text-white/90 mb-8 leading-relaxed">                    │ │
-│ │                     Survive endless waves of monsters in the ultimate action-packed survival adventure           │ │
-│ │                 </p>                                                                                             │ │
-│ │                                                                                                                  │ │
-│ │                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">                   │ │
-│ │                     <div class="flex items-center bg-white/20 backdrop-blur-sm text-white px-4 py-2              │ │
-│ │ rounded-full">                                                                                                   │ │
-│ │                         <div class="w-2 h-2 bg-apple-green rounded-full mr-2 animate-pulse"></div>               │ │
-│ │                         <span class="text-sm font-medium">Play Instantly - No Download</span>                    │ │
-│ │                     </div>                                                                                       │ │
-│ │                     <div class="flex items-center bg-white/20 backdrop-blur-sm text-white px-4 py-2              │ │
-│ │ rounded-full">                                                                                                   │ │
-│ │                         <span class="text-sm font-medium">⚡ Fast Loading</span>                                  │ │
-│ │                     </div>                                                                                       │ │
-│ │                 </div>                                                                                           │ │
-│ │             </div>                                                                                               │ │
-│ │         </div>                                                                                                   │ │
-│ │     </section>                                                                                                   │ │
-│ │                                                                                                                  │ │
-│ │     <!-- Game Section -->                                                                                        │ │
-│ │     <section class="py-8 sm:py-12 lg:py-16">                                                                     │ │
-│ │         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">                                                     │ │
-│ │             <div class="game-container w-full bg-white rounded-2xl sm:rounded-3xl game-shadow overflow-hidden">  │ │
-│ │                 <iframe                                                                                          │ │
-│ │                     src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html"          │ │
-│ │                     class="w-full h-full border-0"                                                               │ │
-│ │                     allowfullscreen                                                                              │ │
-│ │                     loading="eager"                                                                              │ │
-│ │                     title="Monster Survivors - Free Online Survival Game"                                        │ │
-│ │                     allow="fullscreen; gamepad;">                                                                │ │
-│ │                 </iframe>                                                                                        │ │
-│ │             </div>                                                                                               │ │
-│ │                                                                                                                  │ │
-│ │             <div class="mt-6 text-center">                                                                       │ │
-│ │                 <p class="text-sm sm:text-base text-apple-gray">                                                 │ │
-│ │                     🎮 Use WASD or Arrow Keys to move • 🖱️ Mouse to aim • Game loads automatically              │ │
-│ │                 </p>                                                                                             │ │
-│ │             </div>                                                                                               │ │
-│ │         </div>                                                                                                   │ │
-│ │     </section>                                                                                                   │ │
-│ │                                                                                                                  │ │
-│ │     <!-- Game Overview -->                                                                                       │ │
-│ │     <section class="py-12 sm:py-16 lg:py-20 bg-white">                                                           │ │
-│ │         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">                                                     │ │
-│ │             <div class="text-center mb-12">                                                                      │ │
-│ │                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-apple-dark mb-4">                     │ │
-│ │                     About Monster Survivors                                                                      │ │
-│ │                 </h2>                                                                                            │ │
-│ │                 <p class="text-lg sm:text-xl text-apple-gray max-w-3xl mx-auto leading-relaxed">                 │ │
-│ │                     Immerse yourself in the ultimate survival experience where strategy meets action in an       │ │
-│ │ endless battle against monstrous creatures.                                                                      │ │
-│ │                 </p>                                                                                             │ │
-│ │             </div>                                                                                               │ │
-│ │                                                                                                                  │ │
-│ │             <div class="grid lg:grid-cols-2 gap-12 items-center mb-16">                                          │ │
-│ │                 <div>                                                                                            │ │
-│ │                     <h2 class="text-2xl sm:text-3xl font-bold text-apple-dark mb-6">Epic Survival Action</h2>    │ │
-│ │                     <p class="text-base sm:text-lg text-apple-gray leading-relaxed mb-6">                        │ │
-│ │                         Monster Survivors delivers an intense survival experience where you face relentless      │ │
-│ │ waves of creatures in a fight for your life. Each wave brings new challenges, stronger enemies, and the need for │ │
-│ │  quick thinking and strategic planning.                                                                          │ │
-│ │                     </p>                                                                                         │ │
-│ │                     <p class="text-base sm:text-lg text-apple-gray leading-relaxed">                             │ │
-│ │                         Master your combat skills, collect powerful upgrades, and discover unique weapon         │ │
-│ │ combinations as you progress through increasingly difficult levels. The game features smooth controls, stunning  │ │
-│ │ visuals, and addictive gameplay that will keep you coming back for more.                                         │ │
-│ │                     </p>                                                                                         │ │
-│ │                 </div>                                                                                           │ │
-│ │                                                                                                                  │ │
-│ │                 <div class="grid grid-cols-2 gap-4">                                                             │ │
-│ │                     <div class="bg-apple-gray6 rounded-2xl p-6 card-shadow">                                     │ │
-│ │                         <div class="text-2xl mb-2">⚔️</div>                                                      │ │
-│ │                         <h3 class="font-semibold text-apple-dark mb-2">Combat System</h3>                        │ │
-│ │                         <p class="text-sm text-apple-gray">Dynamic fighting mechanics with multiple weapon       │ │
-│ │ types</p>                                                                                                        │ │
-│ │                     </div>                                                                                       │ │
-│ │                     <div class="bg-apple-gray6 rounded-2xl p-6 card-shadow">                                     │ │
-│ │                         <div class="text-2xl mb-2">📈</div>                                                      │ │
-│ │                         <h3 class="font-semibold text-apple-dark mb-2">Progression</h3>                          │ │
-│ │                         <p class="text-sm text-apple-gray">Level up and unlock powerful abilities and            │ │
-│ │ upgrades</p>                                                                                                     │ │
-│ │                     </div>                                                                                       │ │
-│ │                     <div class="bg-apple-gray6 rounded-2xl p-6 card-shadow">                                     │ │
-│ │                         <div class="text-2xl mb-2">🎯</div>                                                      │ │
-│ │                         <h3 class="font-semibold text-apple-dark mb-2">Strategy</h3>                             │ │
-│ │                         <p class="text-sm text-apple-gray">Plan your moves and adapt to different enemy          │ │
-│ │ types</p>                                                                                                        │ │
-│ │                     </div>                                                                                       │ │
-│ │                     <div class="bg-apple-gray6 rounded-2xl p-6 card-shadow">                                     │ │
-│ │                         <div class="text-2xl mb-2">🏆</div>                                                      │ │
-│ │                         <h3 class="font-semibold text-apple-dark mb-2">Achievements</h3>                         │ │
-│ │                         <p class="text-sm text-apple-gray">Unlock rewards and track your survival records</p>    │ │
-│ │                     </div>                                                                                       │ │
-│ │                 </div>                                                                                           │ │
-│ │             </div>                                                                                               │ │
-│ │         </div>                                                                                                   │ │
-│ │     </section>                                                                                                   │ │
-│ │                                                                                                                  │ │
-│ │     <!-- Game Features -->                                                                                       │ │
-│ │     <section class="py-12 sm:py-16 lg:py-20 apple-gradient">                                                     │ │
-│ │         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">                                                     │ │
-│ │             <div class="text-center mb-12">                                                                      │ │
-│ │                 <h2 class="text-3xl sm:text-4xl font-bold text-apple-dark mb-4">                                 │ │
-│ │                     Game Features                                                                                │ │
-│ │                 </h2>                                                                                            │ │
-│ │                 <p class="text-lg text-apple-gray">                                                              │ │
-│ │                     Discover what makes Monster Survivors an unforgettable gaming experience                     │ │
-│ │                 </p>                                                                                             │ │
-│ │             </div>                                                                                               │ │
-│ │                                                                                                                  │ │
-│ │             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">                                               │ │
-│ │                 <div class="bg-white rounded-2xl p-8 card-shadow">                                               │ │
-│ │                     <div class="w-12 h-12 bg-apple-blue rounded-xl flex items-center justify-center mb-4">       │ │
-│ │                         <span class="text-white text-xl">🎮</span>                                               │ │
-│ │                     </div>                                                                                       │ │
-│ │                     <h3 class="text-xl font-bold text-apple-dark mb-3">Intuitive Controls</h3>                   │ │
-│ │                     <p class="text-apple-gray">Easy-to-learn controls that work perfectly on both desktop and    │ │
-│ │ mobile devices. Jump right into the action!</p>                                                                  │ │
-│ │                 </div>                                                                                           │ │
-│ │                                                                                                                  │ │
-│ │                 <div class="bg-white rounded-2xl p-8 card-shadow">                                               │ │
-│ │                     <div class="w-12 h-12 bg-apple-green rounded-xl flex items-center justify-center mb-4">      │ │
-│ │                         <span class="text-white text-xl">⚡</span>                                                │ │
-│ │                     </div>                                                                                       │ │
-│ │                     <h3 class="text-xl font-bold text-apple-dark mb-3">Fast-Paced Action</h3>                    │ │
-│ │                     <p class="text-apple-gray">Experience heart-pounding moments as monster waves become         │ │
-│ │ increasingly intense and challenging.</p>                                                                        │ │
-│ │                 </div>                                                                                           │ │
-│ │                                                                                                                  │ │
-│ │                 <div class="bg-white rounded-2xl p-8 card-shadow">                                               │ │
-│ │                     <div class="w-12 h-12 bg-apple-purple rounded-xl flex items-center justify-center mb-4">     │ │
-│ │                         <span class="text-white text-xl">🛡️</span>                                              │ │
-│ │                     </div>                                                                                       │ │
-│ │                     <h3 class="text-xl font-bold text-apple-dark mb-3">Weapon Upgrades</h3>                      │ │
-│ │                     <p class="text-apple-gray">Collect and upgrade various weapons and abilities to create your  │ │
-│ │ perfect monster-fighting arsenal.</p>                                                                            │ │
-│ │                 </div>                                                                                           │ │
-│ │                                                                                                                  │ │
-│ │                 <div class="bg-white rounded-2xl p-8 card-shadow">                                               │ │
-│ │                     <div class="w-12 h-12 bg-apple-orange rounded-xl flex items-center justify-center mb-4">     │ │
-│ │                         <span class="text-white text-xl">🌍</span>                                               │ │
-│ │                     </div>                                                                                       │ │
-│ │                     <h3 class="text-xl font-bold text-apple-dark mb-3">Diverse Environments</h3>                 │ │
-│ │                     <p class="text-apple-gray">Battle through various atmospheric locations, each with unique    │ │
-│ │ challenges and visual themes.</p>                                                                                │ │
-│ │                 </div>                                                                                           │ │
-│ │                                                                                                                  │ │
-│ │                 <div class="bg-white rounded-2xl p-8 card-shadow">                                               │ │
-│ │                     <div class="w-12 h-12 bg-apple-red rounded-xl flex items-center justify-center mb-4">        │ │
-│ │                         <span class="text-white text-xl">👹</span>                                               │ │
-│ │                     </div>                                                                                       │ │
-│ │                     <h3 class="text-xl font-bold text-apple-dark mb-3">Monster Variety</h3>                      │ │
-│ │                     <p class="text-apple-gray">Face dozens of different monster types, each with unique          │ │
-│ │ behaviors, attacks, and weaknesses to exploit.</p>                                                               │ │
-│ │                 </div>                                                                                           │ │
-│ │                                                                                                                  │ │
-│ │                 <div class="bg-white rounded-2xl p-8 card-shadow">                                               │ │
-│ │                     <div class="w-12 h-12 bg-apple-cyan rounded-xl flex items-center justify-center mb-4">       │ │
-│ │                         <span class="text-white text-xl">📊</span>                                               │ │
-│ │                     </div>                                                                                       │ │
-│ │                     <h3 class="text-xl font-bold text-apple-dark mb-3">Progress Tracking</h3>                    │ │
-│ │                     <p class="text-apple-gray">Monitor your performance with detailed statistics and compete for │ │
-│ │  high scores and survival times.</p>                                                                             │ │
-│ │                 </div>                                                                                           │ │
-│ │             </div>                                                                                               │ │
-│ │         </div>                                                                                                   │ │
-│ │     </section>                                                                                                   │ │
-│ │                                                                                                                  │ │
-│ │     <!-- How to Play -->                                                                                         │ │
-│ │     <section class="py-12 sm:py-16 lg:py-20 bg-white">                                                           │ │
-│ │         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">                                                     │ │
-│ │             <div class="text-center mb-12">                                                                      │ │
-│ │                 <h2 class="text-3xl sm:text-4xl font-bold text-apple-dark mb-4">                                 │ │
-│ │                     How to Play Monster Survivors                                                                │ │
-│ │                 </h2>                                                                                            │ │
-│ │                 <p class="text-lg text-apple-gray">                                                              │ │
-│ │                     Master the basics and become a survival expert in minutes                                    │ │
-│ │                 </p>                                                                                             │ │
-│ │             </div>                                                                                               │ │
-│ │                                                                                                                  │ │
-│ │             <div class="grid md:grid-cols-4 gap-8">                                                              │ │
-│ │                 <div class="text-center">                                                                        │ │
-│ │                     <div class="w-16 h-16 bg-gradient-to-r from-apple-blue to-apple-indigo rounded-2xl flex      │ │
-│ │ items-center justify-center mx-auto mb-6">                                                                       │ │
-│ │                         <span class="text-white font-bold text-xl">1</span>                                      │ │
-│ │                     </div>                                                                                       │ │
-│ │                     <h3 class="text-xl font-bold text-apple-dark mb-3">Start the Game</h3>                       │ │
-│ │                     <p class="text-apple-gray">Click the play button above to instantly load Monster Survivors   │ │
-│ │ in your browser. No downloads or installations required!</p>                                                     │ │
-│ │                 </div>                                                                                           │ │
-│ │                                                                                                                  │ │
-│ │                 <div class="text-center">                                                                        │ │
-│ │                     <div class="w-16 h-16 bg-gradient-to-r from-apple-indigo to-apple-purple rounded-2xl flex    │ │
-│ │ items-center justify-center mx-auto mb-6">                                                                       │ │
-│ │                         <span class="text-white font-bold text-xl">2</span>                                      │ │
-│ │                     </div>                                                                                       │ │
-│ │                     <h3 class="text-xl font-bold text-apple-dark mb-3">Control Your Character</h3>               │ │
-│ │                     <p class="text-apple-gray">Use WASD keys or arrow keys to move your character. Your          │ │
-│ │ character will automatically attack nearby monsters.</p>                                                         │ │
-│ │                 </div>                                                                                           │ │
-│ │                                                                                                                  │ │
-│ │                 <div class="text-center">                                                                        │ │
-│ │                     <div class="w-16 h-16 bg-gradient-to-r from-apple-purple to-apple-pink rounded-2xl flex      │ │
-│ │ items-center justify-center mx-auto mb-6">                                                                       │ │
-│ │                         <span class="text-white font-bold text-xl">3</span>                                      │ │
-│ │                     </div>                                                                                       │ │
-│ │                     <h3 class="text-xl font-bold text-apple-dark mb-3">Collect & Upgrade</h3>                    │ │
-│ │                     <p class="text-apple-gray">Gather experience gems from defeated monsters and choose upgrades │ │
-│ │  to enhance your weapons and abilities.</p>                                                                      │ │
-│ │                 </div>                                                                                           │ │
-│ │                                                                                                                  │ │
-│ │                 <div class="text-center">                                                                        │ │
-│ │                     <div class="w-16 h-16 bg-gradient-to-r from-apple-pink to-apple-red rounded-2xl flex         │ │
-│ │ items-center justify-center mx-auto mb-6">                                                                       │ │
-│ │                         <span class="text-white font-bold text-xl">4</span>                                      │ │
-│ │                     </div>                                                                                       │ │
-│ │                     <h3 class="text-xl font-bold text-apple-dark mb-3">Survive Waves</h3>                        │ │
-│ │                     <p class="text-apple-gray">Stay alive as long as possible while facing increasingly          │ │
-│ │ difficult waves of monsters. Beat your high score!</p>                                                           │ │
-│ │                 </div>                                                                                           │ │
-│ │             </div>                                                                                               │ │
-│ │         </div>                                                                                                   │ │
-│ │     </section>                                                                                                   │ │
-│ │                                                                                                                  │ │
-│ │     <!-- Game Stats -->                                                                                          │ │
-│ │     <section class="py-12 sm:py-16 bg-apple-gray6">                                                              │ │
-│ │         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">                                                     │ │
-│ │             <div class="text-center mb-12">                                                                      │ │
-│ │                 <h2 class="text-3xl sm:text-4xl font-bold text-apple-dark mb-4">                                 │ │
-│ │                     Game Information                                                                             │ │
-│ │                 </h2>                                                                                            │ │
-│ │             </div>                                                                                               │ │
-│ │                                                                                                                  │ │
-│ │             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">                                                  │ │
-│ │                 <div class="bg-white rounded-2xl p-6 text-center card-shadow">                                   │ │
-│ │                     <div class="text-2xl sm:text-3xl font-bold text-apple-green mb-2">FREE</div>                 │ │
-│ │                     <div class="text-sm text-apple-gray">To Play</div>                                           │ │
-│ │                 </div>                                                                                           │ │
-│ │                 <div class="bg-white rounded-2xl p-6 text-center card-shadow">                                   │ │
-│ │                     <div class="text-2xl sm:text-3xl font-bold text-apple-blue mb-2">BROWSER</div>               │ │
-│ │                     <div class="text-sm text-apple-gray">Platform</div>                                          │ │
-│ │                 </div>                                                                                           │ │
-│ │                 <div class="bg-white rounded-2xl p-6 text-center card-shadow">                                   │ │
-│ │                     <div class="text-2xl sm:text-3xl font-bold text-apple-orange mb-2">ACTION</div>              │ │
-│ │                     <div class="text-sm text-apple-gray">Genre</div>                                             │ │
-│ │                 </div>                                                                                           │ │
-│ │                 <div class="bg-white rounded-2xl p-6 text-center card-shadow">                                   │ │
-│ │                     <div class="text-2xl sm:text-3xl font-bold text-apple-purple mb-2">ALL AGES</div>            │ │
-│ │                     <div class="text-sm text-apple-gray">Rating</div>                                            │ │
-│ │                 </div>                                                                                           │ │
-│ │             </div>                                                                                               │ │
-│ │         </div>                                                                                                   │ │
-│ │     </section>                                                                                                   │ │
-│ │                                                                                                                  │ │
-│ │     <!-- Footer -->                                                                                              │ │
-│ │     <footer class="bg-apple-dark text-white py-12 sm:py-16">                                                     │ │
-│ │         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">                                                     │ │
-│ │             <div class="grid md:grid-cols-4 gap-8">                                                              │ │
-│ │                 <div class="md:col-span-2">                                                                      │ │
-│ │                     <h3 class="text-2xl font-bold mb-4 text-gradient">JuZiGongZhu Games</h3>                     │ │
-│ │                     <p class="text-apple-gray2 text-sm sm:text-base leading-relaxed mb-4">                       │ │
-│ │                         Your premier destination for high-quality free online games. Experience the latest       │ │
-│ │ browser games without downloads, installations, or registration. Play instantly on any device.                   │ │
-│ │                     </p>                                                                                         │ │
-│ │                     <div class="flex flex-wrap gap-2">                                                           │ │
-│ │                         <span class="bg-apple-dark2 px-3 py-1 rounded-full text-xs">Free Games</span>            │ │
-│ │                         <span class="bg-apple-dark2 px-3 py-1 rounded-full text-xs">No Download</span>           │ │
-│ │                         <span class="bg-apple-dark2 px-3 py-1 rounded-full text-xs">Mobile Ready</span>          │ │
-│ │                     </div>                                                                                       │ │
-│ │                 </div>                                                                                           │ │
-│ │                                                                                                                  │ │
-│ │                 <div>                                                                                            │ │
-│ │                     <h3 class="font-semibold mb-4 text-white">Game Categories</h3>                               │ │
-│ │                     <ul class="text-apple-gray2 text-sm space-y-2">                                              │ │
-│ │                         <li>Action Games</li>                                                                    │ │
-│ │                         <li>Survival Games</li>                                                                  │ │
-│ │                         <li>Strategy Games</li>                                                                  │ │
-│ │                         <li>Adventure Games</li>                                                                 │ │
-│ │                         <li>Puzzle Games</li>                                                                    │ │
-│ │                     </ul>                                                                                        │ │
-│ │                 </div>                                                                                           │ │
-│ │                                                                                                                  │ │
-│ │                 <div>                                                                                            │ │
-│ │                     <h3 class="font-semibold mb-4 text-white">Features</h3>                                      │ │
-│ │                     <ul class="text-apple-gray2 text-sm space-y-2">                                              │ │
-│ │                         <li>Instant Play</li>                                                                    │ │
-│ │                         <li>Mobile Compatible</li>                                                               │ │
-│ │                         <li>HD Graphics</li>                                                                     │ │
-│ │                         <li>Regular Updates</li>                                                                 │ │
-│ │                         <li>Safe & Secure</li>                                                                   │ │
-│ │                     </ul>                                                                                        │ │
-│ │                 </div>                                                                                           │ │
-│ │             </div>                                                                                               │ │
-│ │                                                                                                                  │ │
-│ │             <div class="border-t border-apple-gray mt-12 pt-8">                                                  │ │
-│ │                 <div class="flex flex-col sm:flex-row justify-between items-center gap-4">                       │ │
-│ │                     <p class="text-apple-gray2 text-sm text-center sm:text-left">                                │ │
-│ │                         © 2025 JuZiGongZhu.com. All rights reserved. Play Monster Survivors and discover         │ │
-│ │ amazing free online games.                                                                                       │ │
-│ │                     </p>                                                                                         │ │
-│ │                     <div class="flex items-center gap-4 text-apple-gray2 text-sm">                               │ │
-│ │                         <span>🎮 Online Games</span>                                                             │ │
-│ │                         <span>🆓 Free to Play</span>                                                             │ │
-│ │                     </div>                                                                                       │ │
-│ │                 </div>                                                                                           │ │
-│ │             </div>                                                                                               │ │
-│ │         </div>                                                                                                   │ │
-│ │     </footer>                                                                                                    │ │
-│ │                                                                                                                  │ │
-│ │     <!-- JSON-LD Structured Data -->                                                                             │ │
-│ │     <script type="application/ld+json">                                                                          │ │
-│ │     {                                                                                                            │ │
-│ │         "@context": "https://schema.org",                                                                        │ │
-│ │         "@type": "Game",                                                                                         │ │
-│ │         "name": "Monster Survivors",                                                                             │ │
-│ │         "description": "Play Monster Survivors online for free! Epic survival action game with endless monster   │ │
-│ │ waves. No download needed - play instantly in your browser on PC and mobile.",                                   │ │
-│ │         "url": "https://juzigongzhu.com/",                                                                       │ │
-│ │         "genre": ["Action", "Survival", "Strategy"],                                                             │ │
-│ │         "playMode": "SinglePlayer",                                                                              │ │
-│ │         "applicationCategory": "Game",                                                                           │ │
-│ │         "operatingSystem": "Any",                                                                                │ │
-│ │         "browserRequirements": "HTML5 compatible browser",                                                       │ │
-│ │         "offers": {                                                                                              │ │
-│ │             "@type": "Offer",                                                                                    │ │
-│ │             "price": "0",                                                                                        │ │
-│ │             "priceCurrency": "USD"                                                                               │ │
-│ │         },                                                                                                       │ │
-│ │         "publisher": {                                                                                           │ │
-│ │             "@type": "Organization",                                                                             │ │
-│ │             "name": "JuZiGongZhu Games",                                                                         │ │
-│ │             "url": "https://juzigongzhu.com/"                                                                    │ │
-│ │         }                                                                                                        │ │
-│ │     }                                                                                                            │ │
-│ │     </script>                                                                                                    │ │
-│ │                                                                                                                  │ │
-│ │     <!-- Performance and UX Scripts -->                                                                          │ │
-│ │     <script>                                                                                                     │ │
-│ │         // Smooth scrolling for anchor links                                                                     │ │
-│ │         document.querySelectorAll('a[href^="#"]').forEach(anchor => {                                            │ │
-│ │             anchor.addEventListener('click', function (e) {                                                      │ │
-│ │                 e.preventDefault();                                                                              │ │
-│ │                 const target = document.querySelector(this.getAttribute('href'));                                │ │
-│ │                 if (target) {                                                                                    │ │
-│ │                     target.scrollIntoView({                                                                      │ │
-│ │                         behavior: 'smooth',                                                                      │ │
-│ │                         block: 'start'                                                                           │ │
-│ │                     });                                                                                          │ │
-│ │                 }                                                                                                │ │
-│ │             });                                                                                                  │ │
-│ │         });                                                                                                      │ │
-│ │                                                                                                                  │ │
-│ │         // Game loading analytics                                                                                │ │
-│ │         window.addEventListener('load', function() {                                                             │ │
-│ │             const gameFrame = document.querySelector('iframe');                                                  │ │
-│ │             if (gameFrame) {                                                                                     │ │
-│ │                 gameFrame.addEventListener('load', function() {                                                  │ │
-│ │                     console.log('Monster Survivors game loaded successfully');                                   │ │
-│ │                     // You can add analytics tracking here                                                       │ │
-│ │                 });                                                                                              │ │
-│ │                                                                                                                  │ │
-│ │                 gameFrame.addEventListener('error', function() {                                                 │ │
-│ │                     console.log('Game loading error');                                                           │ │
-│ │                     // You can add error tracking here                                                           │ │
-│ │                 });                                                                                              │ │
-│ │             }                                                                                                    │ │
-│ │         });                                                                                                      │ │
-│ │                                                                                                                  │ │
-│ │         // Lazy loading optimization                                                                             │ │
-│ │         if ('IntersectionObserver' in window) {                                                                  │ │
-│ │             const lazyElements = document.querySelectorAll('[loading="lazy"]');                                  │ │
-│ │             const lazyObserver = new IntersectionObserver(function(entries) {                                    │ │
-│ │                 entries.forEach(function(entry) {                                                                │ │
-│ │                     if (entry.isIntersecting) {                                                                  │ │
-│ │                         entry.target.loading = 'eager';                                                          │ │
-│ │                         lazyObserver.unobserve(entry.target);                                                    │ │
-│ │                     }                                                                                            │ │
-│ │                 });                                                                                              │ │
-│ │             });                                                                                                  │ │
-│ │                                                                                                                  │ │
-│ │             lazyElements.forEach(function(element) {                                                             │ │
-│ │                 lazyObserver.observe(element);                                                                   │ │
-│ │             });                                                                                                  │ │
-│ │         }                                                                                                        │ │
-│ │     </script>                                                                                                    │ │
-│ │ </body>                                                                                                          │ │
-│ │ </html>     
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Survivors - Fight Endless Waves of Monsters</title>
+    <meta name="description" content="Survive endless waves of monsters in this action-packed roguelike game. Upgrade your character, collect powerful items, and face increasingly difficult challenges.">
+    <link rel="canonical" href="https://monstersurvivors.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            blue: '#007AFF',
+                            red: '#FF3B30',
+                            green: '#34C759',
+                            purple: '#AF52DE',
+                            yellow: '#FFCC00',
+                            orange: '#FF9500',
+                            dark: '#1C1C1E',
+                            gray: '#8E8E93',
+                            lightgray: '#F2F2F7'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/css">
+        @media (max-width: 640px) {
+            .game-container {
+                height: 70vh;
+            }
+        }
+    </style>
+</head>
+<body class="bg-apple-lightgray text-apple-dark">
+    <header class="bg-apple-blue text-white p-4 md:p-6 shadow-md">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-center md:text-left mb-4 md:mb-0">
+                    <h1 class="text-3xl md:text-4xl font-bold">Monster Survivors</h1>
+                    <p class="text-lg mt-2">Survive and fight against endless waves of monsters!</p>
+                </div>
+                <nav>
+                    <ul class="flex space-x-4">
+                        <li><a href="#game" class="hover:text-apple-yellow transition-colors">Play Now</a></li>
+                        <li><a href="#about" class="hover:text-apple-yellow transition-colors">About</a></li>
+                        <li><a href="#features" class="hover:text-apple-yellow transition-colors">Features</a></li>
+                        <li><a href="#controls" class="hover:text-apple-yellow transition-colors">Controls</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-6">
+        <section id="game" class="my-8">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-apple-blue">Play Monster Survivors</h2>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div class="game-container w-full h-screen max-h-[600px]">
+                    <iframe src="https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html" 
+                            class="w-full h-full border-0" 
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="my-12">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-apple-blue">About Monster Survivors</h2>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <p class="mb-4">Monster Survivors is an action-packed roguelike survival game where you must fight against endless waves of monsters. Each run is unique, with random enemy spawns, power-ups, and challenges to overcome.</p>
+                <p>Inspired by games like Vampire Survivors, this game combines fast-paced action with strategic character building. How long can you survive as the difficulty continuously increases?</p>
+            </div>
+        </section>
+
+        <section id="features" class="my-12">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-apple-blue">Game Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold text-apple-orange mb-3">Multiple Characters</h3>
+                    <p>Choose from various characters, each with unique starting weapons and abilities.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold text-apple-green mb-3">Weapon Evolution</h3>
+                    <p>Combine weapons and passive items to create powerful evolved weapons with special effects.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold text-apple-purple mb-3">Level Up System</h3>
+                    <p>Gain experience by defeating enemies and level up to choose new weapons or upgrades.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold text-apple-red mb-3">Boss Battles</h3>
+                    <p>Face off against massive boss monsters that appear at specific time intervals.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold text-apple-yellow mb-3">Treasure Chests</h3>
+                    <p>Find and open treasure chests to receive random items, gold, or special power-ups.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-semibold text-apple-blue mb-3">Daily Challenges</h3>
+                    <p>Complete daily challenges to earn rewards and climb the global leaderboard.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="controls" class="my-12">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4 text-apple-blue">Game Controls</h2>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <h3 class="text-xl font-semibold text-apple-purple mb-3">Keyboard Controls</h3>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><span class="font-semibold">WASD or Arrow Keys:</span> Move your character</li>
+                            <li><span class="font-semibold">Space:</span> Pause the game</li>
+                            <li><span class="font-semibold">E or Enter:</span> Select/Confirm</li>
+                            <li><span class="font-semibold">Esc:</span> Back/Menu</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-apple-orange mb-3">Mobile Controls</h3>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><span class="font-semibold">Virtual Joystick:</span> Appears on the left side of the screen for movement</li>
+                            <li><span class="font-semibold">Tap Buttons:</span> Menu and action buttons on the right side</li>
+                            <li><span class="font-semibold">Swipe:</span> Navigate menus and selection screens</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-apple-dark text-white p-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2025 Monster Survivors. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-apple-blue transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-apple-blue transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-apple-blue transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JSON-LD structured data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Monster Survivors",
+        "description": "Survive endless waves of monsters in this action-packed roguelike game. Upgrade your character, collect powerful items, and face increasingly difficult challenges.",
+        "genre": ["Action", "Roguelike", "Survival"],
+        "playMode": "SinglePlayer",
+        "applicationCategory": "Game",
+        "url": "https://monstersurvivors.com",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+        }
+    }
+    </script>
+</body>
+</html>
